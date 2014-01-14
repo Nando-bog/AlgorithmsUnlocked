@@ -35,7 +35,7 @@ def sentinel_linear_search(l, item):
     
 
 l=['hola', 'no', "mañana", 'Clemencia', 'GLM', 1, 10, 245, 'glm']
-item='glm'
+item='GLM'
 print("Using linear search for '{0}' in {1}... {2}.".format(item, l, linear_search(l, item)))
 print("Using better linear search for '{0}' in {1}... {2}.".format(item, l, better_linear_search(l, item)))
 print("Using sentinel linear search for '{0}' in {1}... {2}.".format(item, l, better_linear_search(l, item)))
