@@ -32,10 +32,22 @@ def sentinel_linear_search(l, item):
         return True
     else:
         return False
-    
+
+
+def factorial(n):
+    """Calculates the factorial of int(n)>0 using a recursive algorithm"""
+    if n<0:
+        raise ValueError("El número debe ser mayor que cero.")
+    if n == 0:
+        return 1
+    return n * factorial(n-1)
+
+nfac=-1
+
 
 l=['hola', 'no', "mañana", 'Clemencia', 'GLM', 1, 10, 245, 'glm']
 item='GLM'
 print("Using linear search for '{0}' in {1}... {2}.".format(item, l, linear_search(l, item)))
 print("Using better linear search for '{0}' in {1}... {2}.".format(item, l, better_linear_search(l, item)))
 print("Using sentinel linear search for '{0}' in {1}... {2}.".format(item, l, better_linear_search(l, item)))
+print("Calculando {0}!... = {1}".format(nfac, factorial(nfac)))
