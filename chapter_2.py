@@ -3,7 +3,7 @@
 # Linear search procedure described in pg. 13. Better linear search, described in page 14. sentinel linear search in pg. 16. Recursive linear search in pg. 24. 
 # Recursive factorial is described in pg. 23
 
-
+#Cormen defines 3 inputs, including the length of the list. That value is implied here through the use of Python's for... in construct.
 def linear_search(l, item):
     """ Returns True if item is in the list l, False if it is not."""
     r=False
@@ -12,7 +12,7 @@ def linear_search(l, item):
             r = True
     return r
 
-
+#Cormen defines 3 inputs, including the length of the list. That value is implied here through the use of Python's for... in construct.
 def better_linear_search(l, item):
     """ Returns True if item is in the list l, False if it is not. Improves from linear_search by not checking until the end of the list if the item is found."""
     for i in l:
@@ -20,7 +20,7 @@ def better_linear_search(l, item):
             return True
     return False
 
-
+#Cormen defines 3 inputs, including the length of the list. That value is implied here through the use of Python's for... in construct.
 def sentinel_linear_search(l, item):
     """ Returns True if item is in the list l, False if it is not."""
     last=l[-1]
@@ -54,6 +54,7 @@ def bad_factorial(n):
     return (bad_factorial(n+1)/n+1)
 
 
+#Cormen defines 4 inputs, including the length of the list and the index of the subarray that is passed in the recursive call. here, the length of the list is implied through the use of Python's for... in construct. The recursive call is made using list slicing syntax and the stop condition modified to an empy list.
 def recursive_linear_search(l, item):
     """Returns True if item is in list(l) 
     """
