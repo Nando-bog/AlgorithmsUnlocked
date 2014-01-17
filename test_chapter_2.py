@@ -5,17 +5,17 @@ TEST_FACTORIAL_NUMBERS=range(1,10)
 
 
 LISTS_FOR_SEARCH = (
-    (['hola', 'no', 'libro', 'ojo', 'good', 'bar'], 'bar', True),
-    ([1, 34, 54, 1012, 3011203040, 43, 0, -1], 1, True),
+    (['hola', 'no', 'libro', 'ojo', 'good', 'bar'], 'bar', 5),
+    ([1, 34, 54, 1012, 3011203040, 43, 0, -1], 1, 0),
     ([2, 4, 6, 8, 10], 11, False),
-    (range(10), 9, True),
+    (range(10), 9, 10),
     (['en', 'algun', 'lugar', 'de', 'lamancha'], 'enn', False),
     #(range(10**3), 9873, True),
     #(range(10**3), '4', False),
 )
 
 
-SEARCH_FUNCTIONS = [chapter_2.linear_search, chapter_2.better_linear_search, chapter_2.sentinel_linear_search, chapter_2.recursive_linear_search]
+SEARCH_FUNCTIONS = [chapter_2.linear_search, chapter_2.better_linear_search, chapter_2.sentinel_linear_search]
 FACTORIAL_FUNCTIONS=[chapter_2.factorial]
 
 
@@ -32,7 +32,10 @@ def test_search(tup, fun):
             else:
                 res += (f, t[1], t[2], 'problemas')
     return res
-    
+
+
+def test_recursive_linear_search(tup, fun, i):
+    pass
     
 def test_factorial(numbers, functions):
     """Tests each f factorial procedure using each number in iterable(n). Returns a tuple with the function, input and input!"""
