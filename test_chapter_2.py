@@ -34,8 +34,21 @@ def test_search(tup, fun):
     return res
 
 
-def test_recursive_linear_search(tup, fun, i):
-    pass
+def test_recursive_linear_search(tup, i):
+    """Tests all search functions, fun, with the list, item and correct
+    answer from tup. Returns a tuple containing tuples of function name,
+    item, result.
+       tup is a tuple containing a list, an item to find in said list
+       and the expected correct output. fun is a list of search functions to test.
+    """
+    res=()
+    for t in tup:
+        if chapter_2.recursive_linear_search(t[0], t[1], i) == t[2]:
+            res += (chapter_2.recursive_linear_search, 'ok')
+        else:
+            res += (chapter_2.recursive_linear_search, t[1], t[2], 'problemas')
+    return res
+    
     
 def test_factorial(numbers, functions):
     """Tests each f factorial procedure using each number in iterable(n). Returns a tuple with the function, input and input!"""
@@ -47,4 +60,5 @@ def test_factorial(numbers, functions):
 
 
 print(test_search(LISTS_FOR_SEARCH, SEARCH_FUNCTIONS))
+print(test_recursive_linear_search(LISTS_FOR_SEARCH, 0))
 print(test_factorial(TEST_FACTORIAL_NUMBERS, FACTORIAL_FUNCTIONS))
