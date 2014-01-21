@@ -6,8 +6,8 @@
 #Binary search described in page 30
 def binary_search(l, n, item):
     """ Returns index of item if item is in the list l, False if it is
-    not. l is assumed to be ordered from least to greatest. n is and
-    int, the length of l"""
+    not. l is assumed to be ordered from least to greatest. n is an
+    int, representing the length of l"""
     p=0
     r=n-1
     q=1
