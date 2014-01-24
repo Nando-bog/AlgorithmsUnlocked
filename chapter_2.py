@@ -1,6 +1,6 @@
 # coding=utf-8
 # My versions of search procedures described in chapter 2 of Cormen, T. H. (2013). Algorithms Unlocked. MIT Press.
-# Version 1.1
+# Version 1.11
 
 
 #Cormen defines 3 inputs, including the length of the list. That value is implied here through the use of Python's for... in construct.
