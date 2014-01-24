@@ -56,7 +56,8 @@ def factorial(n):
 def bad_factorial(n):
     """Will throw a maximum recursion depth error.
     Calculates the factorial of int(n)>0 using a recursive algorithm that
-    does not work properly because it can never reach the stop condition."""
+    does not work properly because it can never reach the stop condition.
+    The math (formula for Factorial) is correct, but the algorithm fails to work."""
     if n<0:
            raise ValueError("El número debe ser mayor que cero.")
     if n == 0:
