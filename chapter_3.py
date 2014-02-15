@@ -5,7 +5,7 @@
 
 #Binary search described in page 30
 def binary_search(l, n, item):
-    """ Returns index of item if item is in the list l, False if it is
+    """ Returns index of item if item is in the list l or False if it is
     not. l is assumed to be ordered from least to greatest. n is an
     int, representing the length of l. Item is the item to be searched."""
     p=0
@@ -24,7 +24,7 @@ def binary_search(l, n, item):
 #Binary search recursive described in page 31
 def recursive_binary_search(l, p, r, item):
     """ Returns index of item if item is in list l or False if it not
-    using recursive call. p and r delineate the subarray into
+    using a recursive call. int p and r delineate the subarray in
     consideration in the current recursion."""
     if r > len(l):
         raise ValueError("r cannot be greater than the length of the \
