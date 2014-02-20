@@ -1,11 +1,10 @@
 #coding=utf-8
-# My versions of procedures described in chapter 3 of Cormen, T. H.
-#(2013). Algorithms Unlocked. MIT Press.
-# Version 0.21
+#My versions of procedures described in chapter 3 of Cormen, T. H. (2013).
+#Algorithms Unlocked. MIT Press.
+#Version 0.22
 
 
 def binary_search(l, n, item):
-
     """ Return index of item if item is in the list l.
 
     Return False if item is not in least.
@@ -55,4 +54,31 @@ def recursive_binary_search(l, p, r, item):
             return recursive_binary_search(l, q + 1, r, item)
 
 
-#Merge sort as described...
+def selection_sort(unordered_list, num_items):
+    """Return list in ascending order using a selection sort algorithm.
+
+    list unurdered list: list to be sorted.
+    int items number of items in l.
+
+    Selection sort described in page 33. Not implemented exactly as Cormen's.
+    The final step does not swap the i-th and smallest elements in the list,
+    but moves the smallest to the position of the i-th element and all others
+    to the next one by using the insert method of Python lists.
+    """
+
+    for item_index in range(num_items):
+        smallest_index = item_index
+        for next_item_index in range(item_index, num_items):
+            if unordered_list[next_item_index] < unordered_list[item_index]:
+                smallest_index = next_item_index
+        ##Pop smallest and insert before item_index instead of swap smallest
+        ##with item_index
+        unordered_list.insert(item_index, unordered_list.pop(smallest_index))
+    return unordered_list
+
+
+##TODO SELECTION SORT pg. 32
+##TODO INSERTION SORT pg. 35
+##TODO MERGE SORT pg. 41
+##TODO QUICKSORT pg. 51
+##TODO PARTITION SORT pg. 54
