@@ -42,6 +42,7 @@ def test_search_2(lists, fun):
     tup is a tuple containing a list, an item to find in said list and
     the expected correct output. fun is a list of search functions to
     test."""
+    
     res=()
     for t in lists:
         for f in fun:
