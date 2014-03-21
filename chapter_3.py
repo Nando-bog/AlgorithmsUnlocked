@@ -8,9 +8,9 @@ def binary_search(l, n, item):
     """ Return index of item if item is in the list l.
 
     Return False if item is not in least.
-    l is assumed to be ordered from least to greatest.
-    n is an int, representing the length of l.
-    item is the item to be searched.
+    l --assumed to be ordered from least to greatest.
+    n --an int, representing the length of l.
+    item --the item to be searched.
     Binary search described in page 30.
     """
 
@@ -18,7 +18,7 @@ def binary_search(l, n, item):
     r = n - 1
     q = 1
     while p <= r:
-        q = (p + r)/2
+        q = (p + r) / 2
         if l[q] == item:
             return q
         elif l[q] > item:
@@ -64,15 +64,29 @@ def selection_sort(unordered_list, num_items):
     for item_index in range(num_items):
         smallest_index = item_index
         for next_item_index in range(item_index+1, num_items):
-            if unordered_list[next_item_index] < unordered_list[smallest_index]:
+            if unordered_list[next_item_index] < \
+               unordered_list[smallest_index]:
                 smallest_index = next_item_index
         unordered_list[item_index], unordered_list[smallest_index] = \
             unordered_list[smallest_index], unordered_list[item_index]
     return unordered_list
 
 
-##TODO TEST SELECTION SORT AND MAKE SURE IT WORKS CORRECTLY pg. 32-33
-##TODO INSERTION SORT pg. 35
+def insertion_sort(unordered_list, num_items):
+    """Return list in ascending order using a insertion sort algorithm.
+
+    list unordered_list: list to be sorted.
+    int num_items: number of items in unordered_list.
+    """
+
+    for i in range(1, num_items):
+        key, j = unordered_list[i], i-1
+        while j >= 0 and unordered_list[j] > key:
+            unordered_list[j+1] = unordered_list[j]
+            j -= 1
+        unordered_list[j+1] = key
+    return unordered_list
+
 ##TODO MERGE SORT pg. 41
 ##TODO QUICKSORT pg. 51
 ##TODO PARTITION SORT pg. 54
