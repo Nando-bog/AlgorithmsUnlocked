@@ -31,7 +31,6 @@ LISTS_FOR_SORT = (
 SORT_FUNCTIONS = [chapter_3.selection_sort, chapter_3.insertion_sort]
 
 
-
 def test_search(lists, fun):
     """Tests all search functions, fun, with the list, item and correct
     answer from tup. Returns a tuple containing tuples of function name,
@@ -67,6 +66,7 @@ def test_search_2(lists, fun):
                 res += (f, 'problemas con {0}'.format(t[2]))
     return res
 
+
 def test_sort(lists, fun):
     """Test all sort functions, fun, with the list, item and correct
     answer.
@@ -87,6 +87,6 @@ def test_sort(lists, fun):
     return res 
 
 
-#print(test_search(LISTS_FOR_SEARCH, SEARCH_FUNCTIONS))
-#print(test_search_2(LISTS_FOR_SEARCH, SEARCH_FUNCTIONS_2))
+print(test_search(LISTS_FOR_SEARCH, SEARCH_FUNCTIONS))
+print(test_search_2(LISTS_FOR_SEARCH, SEARCH_FUNCTIONS_2))
 print(test_sort(LISTS_FOR_SORT, SORT_FUNCTIONS))

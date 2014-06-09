@@ -1,5 +1,5 @@
 # coding=utf-8
-# My versions of search procedures described in chapter 2 of Cormen, T. H. (2013). Algorithms Unlocked. MIT Press.
+# My attempts at of search procedures described in chapter 2 of Cormen, T. H. (2013). Algorithms Unlocked. MIT Press.
 # Version 1.11
 
 
@@ -35,9 +35,9 @@ def sentinel_linear_search(l, item):
     l[-1]=item
     counter=0
     while l[counter] != item:
-        counter+=1
+        counter += 1
     l[-1]=last
-    if counter < len(l)-1 or l[-1]==item:
+    if counter < len(l) - 1 or l[-1] == item:
         return counter
     else:
         return False
@@ -46,7 +46,7 @@ def sentinel_linear_search(l, item):
 # Recursive factorial is described in pg. 23
 def factorial(n):
     """Calculates the factorial of int(n)>0 using a recursive algorithm"""
-    if n<0:
+    if n < 0:
         raise ValueError("El número debe ser mayor que cero.")
     if n == 0:
         return 1
